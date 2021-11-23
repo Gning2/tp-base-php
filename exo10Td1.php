@@ -10,8 +10,13 @@
     }
     while($a!=0);
     echo"Vous devez: $du euros.\n";
-
+    do{
     $g=(int) readline("Montant versé: ");
+     if($g<$du)
+      {
+       echo"Montant insuffisant. \n";
+      }
+     }while($g<$du);
     $r=$g-$du;
     while($r>=10)
     {
